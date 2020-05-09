@@ -1,7 +1,7 @@
 /* variables */
 :root {
-    --primary: #FFC636;
-    --secondary: #e0c389;
+    --primary: #fff8e1;
+    --secondary: #fff8e1;
 }
 
 /* reset */
@@ -34,6 +34,14 @@ body {
 }
 
 .menu-btn {
+    padding: 6px 30px;
+    border-radius: 100px;
+    margin-right: 40px;
+    font-weight: 700;
+    background: #e0c389;
+}
+
+.menu-btn1 {
     padding: 5px 20px;
     border-radius: 100px;
     margin-right: 80px;
@@ -47,7 +55,7 @@ textarea {
     padding: 10px 16px;
     border-radius: 20px;
     border: 2px solid #9893D8;
-    color: #f2f2f2;
+    color: #212121;
     font-size: 1em;
 }
 
@@ -88,7 +96,7 @@ h4 {
 
 .leading {
     font-size: 1.1em;
-    color: #fff;
+    color: #212121;
     font-weight: 400;
 }
 

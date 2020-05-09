@@ -5,18 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slide.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
     <script src="https://kit.fontawesome.com/125d37f271.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>Trudne Rozwody</title>
 </head>
 
 <body>
+    <style>
+.parallax1 {
+  background: url(assets/lawyer.jpg);
+  min-height: 100%;
+}
+.parallax2 {
+  background: url(assets/baner.jpg);
+  min-height: 100%;
+}
+.parallax3 {
+  background: url(assets/tlo.png);
+  min-height: 60%;
+}
+.parallax1, .parallax2, .parallax3, .parallax4 {
+  position: relative;
+  opacity: .45;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.heading {
+  position: absolute;
+  color: #fff;
+  font-size: 550%;
+  top: 38%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #fafafa;
+}
+.heading-sm {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 250%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #000;
+}
+
+    </style>
     <nav class="menu-bar site-nav grid">
         <h1 class="logo">TRUDNE ROZWODY</h1>
         <ul>
+            <li class="menu-btn"><a href="#Offer" style="color:black;">OFERTA</a></li>
+            <li class="menu-btn"><a href="#bio" style="color:black;">MY</a></li>
             <li class="menu-btn"><a href="#contact" style="color:black;">KONTAKT</a></li>
         </ul>
     </nav>
+    <div class="parallax1">
+        <div class="heading">
+            &nbsp <i class="fas fa-gavel"></i> Trudne Rozwody</br>
+         
+        </div>
+      </div>
+      
     <section id="welcome" class="grid">
         <div class="welcome-text">
             <h2>Kancelaria<br />Prawna</h2>
@@ -28,12 +87,12 @@
                 kwestiach, jak władza rodzicielska i alimenty.</p>
         </div>
         <div class="welcome-img">
-            <img src="assets/banner_image.svg" alt="pic of planet">
+            <img src="assets/balance.svg" alt="pic of planet">
         </div>
     </section>
-    <section id="about">
+    <section id="Offer">
         <div id="text-about">
-            <span>O Nas<br></span>
+            <span>Oferta<br></span>
 
             <br>Wyznajemy zasadę, że klient nigdy nie może czekać na możliwość kontaktu z kancelarią, dlatego gwarantujemy
             natychmiastową gotowość do podjęcia się sprawy. Nasza skuteczność i sprawność w dzianiu wynika min. z faktu,
@@ -49,7 +108,11 @@
             kwestiach i konsultujemy nasze
             działania.</div>
     </section>
-    
+    <div class="parallax2">
+        <div class="heading">
+          &nbsp;  <i class="fab fa-buffer"></i> Nasza Oferta
+        </div>
+      </div>
     <section id="opisy">
         <div id="opis-1" class="opis">
             <img src="assets/opis_1.png">
@@ -61,7 +124,7 @@
                 również i w takich sprawach.</br></br></div>
         </div>
         <div id="opis-2" class="opis">
-            <img src="assets/opis_2.png">
+            <img src="assets/opis_4.png">
             <div class="opis-tekst">Prowadzimy sprawy w zakresie
                 alimentów na rzecz małoletnich
                 dzieci, w tym uzyskania
@@ -81,8 +144,8 @@
         </div>
     </section>
 
-    <section id="offer">
-        <h3>Oferta</h3>
+    <section id="Offer">
+        <h3>Usługi</h3>
         <ul class="grid">
             <li>
                 <img src="assets/undraw_children_4rtb.svg" alt="1">
@@ -113,7 +176,11 @@
         <p class="offer-text">Alimenty a także rozliczenia majątkowe między konkubentami</p>
         <p class="offer-text">Ustalenie władzy rodzicielskiej a także jej ograniczenie</p>
     </section>
-
+    <div class="parallax3">
+        <div class="heading">
+           &nbsp; <i class="far fa-address-card"></i>  O nas
+        </div>
+      </div>
     <section id="bio">
         <div id="text-bio">
             <span>Paweł Sobieralski <br></span>
@@ -150,6 +217,20 @@
         <div id="footer-2">Made with  <span style="color: red"><i class="fas fa-heart"></i></span> by  <a href="http://www.ronso.pl" target="_blank">RONSO</a>.</div>
     </footer>
 
+    <script>
+        $(document).ready(function(){
+$(window).scroll(function(e){
+  parallax();
+});
+
+function parallax(){
+  var scrolled = $(window).scrollTop();
+  $('.hero').css('top',-(scrolled*0.0315)+'rem');
+  $('.hero > h1').css('top',-(scrolled*-0.005)+'rem');
+  $('.hero > h1').css('opacity',1-(scrolled*.00175));
+};
+});
+    </script>
     <script>
         // Initialize and add the map
         function initMap() {
