@@ -5,7 +5,7 @@ body{
     overflow: hidden;
 }
 .parallax{
-    background: url('ratusz.jpg') no-repeat center;
+    background: url('tlo.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -22,21 +22,22 @@ body{
     margin: 0 auto;
     color: #fff;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 80%;
+    top: 25%;
     transform: translate(-50%, -50%);
 }
 .parallax-text{
     text-align: none;
-    font-size: 0.7em;
+    font-size: 1.5em;
     font-family: 'Playfair Display', serif;
     margin: 0 auto;
-    color: #fff;
+    color: #424242;
     position: absolute;
-    left: 50%;
-    top: 65%;
+    left: 76%;
+    top: 40%;
     transform: translate(-20%, -20%);
 }
+
 #navbar{
     overflow: hidden;
     display: grid;
